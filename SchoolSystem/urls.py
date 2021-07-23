@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from . import views
+from django.urls.conf import include
+
 
 app_name = 'year_calender'
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^index/$', views.index, name='index'),
+    path('student/',include("student.urls")),
+   
 ]
