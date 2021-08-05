@@ -1,9 +1,10 @@
 from django.db import models
 from django.db.models.fields import BigAutoField, CharField, DateField, EmailField
+from django.http import request
 
 # Create your models here.
 class Student(models.Model):
-    First_name=models.CharField(max_length=10)
+    First_name=models.CharField(null=True ,max_length=10)
     Last_name=models.CharField(max_length=10)
     Age=models.PositiveSmallIntegerField() 
     Date_of_birth=models.DateField()
@@ -21,9 +22,18 @@ class Student(models.Model):
     )
     Languages=  models.CharField(max_length=2 ,choices=Lang)
     ID_number=models.CharField(max_length=10)
+    nat=((u'R',U'Rwandese'),
+                (u'K',u'Kenyan'),
+                (u'Su',u'Sudanesse'),
+                (u'S','Somali'),
+                (u'SS','South Sudanese')
+
+
+
+    )
+    Nationality=models.CharField(max_length=20,choices=nat)
     
-    Nationality=models.CharField(max_length=20)
-    Passport_photo=models.ImageField()
+    Passport_photo=models.ImageField(upload_to= "images")
     Phone_number=models.PositiveIntegerField()
     Room_number=models.PositiveSmallIntegerField()
     Mentors_name=models.CharField(max_length=20)

@@ -48,7 +48,7 @@
        
         transform: translate(1%,1%,1%,1%);
         box-shadow: 1px 1px 8px  rgba(1,1,1, 125);
-        background-color: rgb(255, 192, 247);
+        background-color: pink;
 
        }
        
@@ -76,7 +76,7 @@
            transition: all 0.3;
        }
        select{
-           -webkit-appearance: none;
+           -webkit-appearance:none;
             appearance: none;
             width: 100%;
            outline: none;
@@ -123,10 +123,10 @@ border-color:purple transparent transparent transparent;
        <div class="form">
     <form method="POST" class="wrapper.form">
         <h1 class="wrapper.title"> </h1>
-        <h2>Student Registration Form</h2>
+        <h2>Trainer Registration Form</h2>
  {{form.as_p}}
  {% csrf_token %}
- <button  type="submit" value="Save" ></p>Register</p></button>
+ <button  type="submit" value="Save" ><p>Register</p></button>
     </form>
 
 </div>

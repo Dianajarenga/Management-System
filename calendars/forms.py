@@ -1,8 +1,8 @@
 from django import forms
 from django.db.models.base import Model
-from .models import Student
+from .models import Calendar
 
-class StudentRegistrationForm(forms.ModelForm):
+class ViewCalendar(forms.ModelForm):
     class Meta:
-        model=Student
+        model=Calendar
         fields="__all__"

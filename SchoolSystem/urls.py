@@ -15,13 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url
+from django.conf.urls import url ##
 from django.urls.conf import include
 
 
-app_name = 'year_calender'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('student/',include("student.urls")),
-   
+    path('trainer/',include("trainer.urls")),
+    path('course/',include("course.urls")),
+    path('calendars/',include("calendars.urls")),
+
+    
 ]
